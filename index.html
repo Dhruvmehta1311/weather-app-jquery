@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body class="bg-blue-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-6 rounded-lg shadow-md w-96">
+    <div class="bg-white p-6 rounded-lg shadow-md w-96 relative">
       <h1 class="text-2xl font-bold text-center mb-4">Weather App</h1>
       <input
         type="text"
@@ -25,6 +25,17 @@
       >
         Get Weather
       </button>
+
+      <!-- Loader -->
+      <div
+        id="loader"
+        class="hidden absolute inset-0 flex items-center justify-center bg-white bg-opacity-75"
+      >
+        <div
+          class="loader border-t-4 border-blue-500 border-solid rounded-full w-12 h-12 animate-spin"
+        ></div>
+      </div>
+
       <div id="weather-info" class="mt-4 hidden">
         <h2 id="city-name" class="text-xl font-bold"></h2>
         <p id="weather-description" class="text-lg"></p>
